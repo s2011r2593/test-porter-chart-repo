@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  redis-basic:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-01-10T16:09:07.5512091-05:00"
+    description: A Helm chart for Kubernetes
+    digest: a689c6e30e4a3c4abc280efd64e86e19372e89873b6c50cd9c6c645c52524e4a
+    icon: https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png
+    name: redis-basic
+    type: application
+    urls:
+    - https://s2011r2593.github.io/test-porter-chart-repo/redis-basic-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-01-10T16:09:07.5472076-05:00"
