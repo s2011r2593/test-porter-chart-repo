@@ -3,7 +3,7 @@ entries:
   docker:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-12T16:38:29.5186517-05:00"
+    created: "2021-01-12T17:01:42.3632499-05:00"
     description: Template for deploying any Docker container on Porter.
     digest: 91b2ad3c226f589867ad06fa2b39e6b908548944c8d2169c0b9d442b1acb5526
     home: https://getporter.dev/
@@ -19,24 +19,25 @@ entries:
   redis-basic:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-12T16:38:29.5287026-05:00"
-    description: A Helm chart for Kubernetes
-    digest: 883cd2563301ffafad757374de13d483e8eee3943f23d177565043f6492be6cf
+    created: "2021-01-12T17:01:42.3643081-05:00"
+    description: Template for deploying Redis to Porter.
+    digest: cb1e6b4eae6c04fa7fdfffe2cb564d98719bc71f2958a2317234b77961cf479d
     icon: https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png
     name: redis-basic
     type: application
     urls:
-    - redis-basic-0.1.0.tgz
-    version: 0.1.0
+    - redis-basic-0.1.1.tgz
+    version: 0.1.1
   ubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-12T16:38:29.5296896-05:00"
-    description: A Helm chart for Kubernetes
-    digest: 7d3a0f64df4abbdff8532b745fb16550e02f32ff0259f233e94ddcb70e40c3db
+    created: "2021-01-12T17:01:42.3643081-05:00"
+    description: Template for deploying an Ubuntu image to Porter.
+    digest: aef1a8908ca4c7d210ae977804a928ed03566435c803181bcd192656f9c95bcd
+    icon: https://image.flaticon.com/icons/png/512/888/888879.png
     name: ubuntu
     type: application
     urls:
-    - ubuntu-0.1.0.tgz
-    version: 0.1.0
-generated: "2021-01-12T16:38:29.5166525-05:00"
+    - ubuntu-0.1.1.tgz
+    version: 0.1.1
+generated: "2021-01-12T17:01:42.3612582-05:00"
