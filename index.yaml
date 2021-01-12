@@ -1,9 +1,25 @@
 apiVersion: v1
 entries:
+  docker:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-01-11T20:45:10.5571153-05:00"
+    description: Template for deploying any Docker container on Porter.
+    digest: 91b2ad3c226f589867ad06fa2b39e6b908548944c8d2169c0b9d442b1acb5526
+    home: https://getporter.dev/
+    icon: https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png
+    keywords:
+    - docker
+    - container
+    name: docker
+    type: application
+    urls:
+    - https://s2011r2593.github.io/test-porter-chart-repo/docker-0.1.0.tgz
+    version: 0.1.0
   redis-basic:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-10T16:38:00.1120931-05:00"
+    created: "2021-01-11T20:45:10.5581151-05:00"
     description: A Helm chart for Kubernetes
     digest: cb84b1e2caab3c3d66359169dfe98c45919d83a7f4dedc04aa6c567c193853ab
     icon: https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png
@@ -12,4 +28,4 @@ entries:
     urls:
     - https://s2011r2593.github.io/test-porter-chart-repo/redis-basic-0.1.0.tgz
     version: 0.1.0
-generated: "2021-01-10T16:38:00.1110484-05:00"
+generated: "2021-01-11T20:45:10.5461157-05:00"
