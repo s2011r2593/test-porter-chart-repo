@@ -12,6 +12,8 @@ tabs:
       label: Username
       settings:
         default: cG9ydGVy
+    - type: subtitle
+      label: "Default password: iluvmongodb"
     - type: base-64-password
       variable: password
       label: Password
