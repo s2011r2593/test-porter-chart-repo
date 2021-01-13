@@ -11,12 +11,12 @@ tabs:
       variable: username
       label: Username
       settings:
-        default: porter
+        default: cG9ydGVy
     - type: base-64-password
       variable: password
       label: Password
       settings:
-        default: iluvporter
+        default: aWx1dm1vbmdvZGI=
   - name: network
     contents:
     - type: heading
