@@ -1,29 +1,26 @@
 name: MongoDB
 hasSource: true
 tabs:
-- name: main
-  label: Main Settings
-  sections:
-  - name: section_one
-    contents: 
-    - type: heading
-      label: Admin Settings
-    - type: base-64
-      variable: username
-      label: Username
-      settings:
-        default: porter
-    - type: base-64-password
-      variable: password
-      label: Password
-      settings:
-        default: iluvporter
-  - name: network
-    contents:
-    - type: heading
-      label: Network Settings
-    - type: string-input
-      variable: kubernetesiohost
-      label: Kubernetes node name
-      settings:
-        default: mongo-node
+- name: section_one
+  contents: 
+  - type: heading
+    label: Admin Settings
+  - type: base-64
+    variable: username
+    label: Username
+    settings:
+      default: porter
+  - type: base-64-password
+    variable: password
+    label: Password
+    settings:
+      default: iluvporter
+- name: network
+  contents:
+  - type: heading
+    label: Network Settings
+  - type: string-input
+    variable: kubernetesiohost
+    label: Kubernetes node name
+    settings:
+      default: mongo-node
