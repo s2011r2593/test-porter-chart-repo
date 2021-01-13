@@ -3,7 +3,7 @@ entries:
   docker:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-13T14:45:01.7939658-05:00"
+    created: "2021-01-13T15:16:34.0794347-05:00"
     description: Template for deploying any Docker container on Porter.
     digest: 91b2ad3c226f589867ad06fa2b39e6b908548944c8d2169c0b9d442b1acb5526
     home: https://getporter.dev/
@@ -19,19 +19,19 @@ entries:
   mongodb:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-13T14:45:01.7988784-05:00"
+    created: "2021-01-13T15:16:34.0814336-05:00"
     description: A Helm chart for Kubernetes
-    digest: d4ee2e8b6d0fee23b4ddf370ccc9e780705592301826c1f14ce3ed487c3ad13f
+    digest: fc69f69b320e7135361c9bb1b391b21064dfecb416a4588e55c0078577b366d9
     icon: https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png
     name: mongodb
     type: application
     urls:
-    - mongodb-0.1.0.tgz
-    version: 0.1.0
+    - mongodb-0.1.2.tgz
+    version: 0.1.2
   redis-basic:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-13T14:45:01.8060833-05:00"
+    created: "2021-01-13T15:16:34.0814336-05:00"
     description: Template for deploying Redis to Porter.
     digest: 4a7693a54ee2f1d48b7515f2bc626040482864732e53182a3a4208bc6e077f2f
     icon: https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png
@@ -43,7 +43,7 @@ entries:
   ubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-13T14:45:01.8112518-05:00"
+    created: "2021-01-13T15:16:34.0824334-05:00"
     description: Template for deploying an Ubuntu image to Porter.
     digest: 23ce3f8482fafc7570c9e39c4f35cd4f437d147e65f016fd10d9267aa3b98b0f
     icon: https://image.flaticon.com/icons/png/512/888/888879.png
@@ -52,4 +52,4 @@ entries:
     urls:
     - ubuntu-0.1.2.tgz
     version: 0.1.2
-generated: "2021-01-13T14:45:01.7892156-05:00"
+generated: "2021-01-13T15:16:34.0764346-05:00"
