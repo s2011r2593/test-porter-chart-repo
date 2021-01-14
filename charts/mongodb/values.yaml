@@ -78,8 +78,12 @@ tolerations: []
 
 affinity: {}
 
-username: cG9ydGVy
+resources:
+  storage: 1Gi
 
-password: aWx1dm1vbmdvZGI=
+auth:
+  username: cG9ydGVy
+  password: aWx1dm1vbmdvZGI=
 
-kubernetesiohost: mongo-node
+network:
+  kubernetesiohost: mongo-node

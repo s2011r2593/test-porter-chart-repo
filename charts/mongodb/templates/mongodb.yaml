@@ -5,8 +5,8 @@ metadata:
   name: mongo-secret
 type: Opaque
 data:
-  MONGO_ROOT_USERNAME: {{ .Values.username }}
-  MONGO_ROOT_PASSWORD: {{ .Values.password }}
+  MONGO_ROOT_USERNAME: {{ .Values.auth.username }}
+  MONGO_ROOT_PASSWORD: {{ .Values.auth.password }}
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -36,8 +36,10 @@ spec:
         - name: mongo-secret
           mountPath: /etc/mongo-secret
           readOnly: true
+        - name: mongo-store
+          mountPath: /data/db
       nodeSelector:
-        kubernetes.io/hostname: {{ .Values.kubernetesiohost }} 
+        kubernetes.io/hostname: {{ .Values.network.kubernetesiohost }} 
       volumes:
       - name: mongo-secret
         secret:
@@ -49,6 +51,20 @@ spec:
           - key: MONGO_ROOT_PASSWORD
             path: admin/MONGO_ROOT_PASSWORD
             mode: 0444
+      - name: mongo-store
+        persistentVolumeClaim:
+          claimName: mongo-pvc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pvc
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.resources.storage }}
 ---
 apiVersion: v1
 kind: Service

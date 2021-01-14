@@ -8,13 +8,13 @@ tabs:
     - type: heading
       label: Admin Settings
     - type: base-64
-      variable: username
+      variable: auth.username
       required: true
       label: Username
       settings:
         default: cG9ydGVy
     - type: base-64-password
-      variable: password
+      variable: auth.password
       label: Password (default = iluvmongodb)
       required: true
       settings:
@@ -24,8 +24,19 @@ tabs:
     - type: heading
       label: Network Settings
     - type: string-input
-      variable: kubernetesiohost
+      variable: network.kubernetesiohost
       required: true
       label: Kubernetes node name
       settings:
         default: mongo-node
+  - name: resource
+    contents:
+    - type: heading
+      label: Resource Allocation
+    - type: number-input
+      variable: resources.storage
+      required: true
+      label: Storage (Gi)
+      settings:
+        default: 1
+        unit: Gi
