@@ -7,7 +7,7 @@ tabs:
     contents: 
     - type: heading
       label: Admin Settings
-    - type: string-input
+    - type: base-64
       variable: username
       required: true
       label: Username
@@ -28,4 +28,4 @@ tabs:
       required: true
       label: Kubernetes node name
       settings:
-        default: bW9uZ28tbm9kZQ==
+        default: mongo-node
