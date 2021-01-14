@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: mongodb-standalone
-        image: mongo:latest
+        image: seenry/public-porter-templates:mongodb
         env:
           - name: MONGO_INITDB_ROOT_USERNAME_FILE
             value: /etc/mongo-secret/admin/MONGO_ROOT_USERNAME
