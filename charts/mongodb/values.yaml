@@ -82,4 +82,4 @@ username: cG9ydGVy
 
 password: aWx1dm1vbmdvZGI=
 
-kubernetesiohost: mongodb-node
+kubernetesiohost: mongo-node
