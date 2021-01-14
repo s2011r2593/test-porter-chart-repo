@@ -23,7 +23,7 @@ tabs:
     contents:
     - type: heading
       label: Network Settings
-    - type: base-64
+    - type: string-input
       variable: kubernetesiohost
       required: true
       label: Kubernetes node name
