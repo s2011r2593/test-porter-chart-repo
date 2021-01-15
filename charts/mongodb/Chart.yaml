@@ -1,10 +1,10 @@
 apiVersion: v2
 name: mongodb
 description: A Helm chart for Kubernetes
-icon: https://img.icons8.com/color/452/mongodb.png
+icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
 
 type: application
 
-version: 0.1.11
+version: 0.1.12
 
 appVersion: 1.16.0

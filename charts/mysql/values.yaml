@@ -82,7 +82,7 @@ auth:
   password: bXlzcWxmdHc=
 
 network:
-  kubernetesiohost: gke-the-mr-p-playhouse-default-pool-b4f0f0da-43v1
+  kubernetesiohost: mysql-node
 
 resources:
   storage: 1Gi
