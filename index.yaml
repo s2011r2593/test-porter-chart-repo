@@ -3,7 +3,7 @@ entries:
   docker:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-14T18:03:03.0098828-05:00"
+    created: "2021-01-15T01:15:03.6816614-05:00"
     description: Template for deploying any Docker container on Porter.
     digest: 91b2ad3c226f589867ad06fa2b39e6b908548944c8d2169c0b9d442b1acb5526
     home: https://getporter.dev/
@@ -19,7 +19,7 @@ entries:
   mongodb:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-14T18:03:03.0098828-05:00"
+    created: "2021-01-15T01:15:03.6888919-05:00"
     description: A Helm chart for Kubernetes
     digest: 6a51ed80dd7912bd861f85031fff84a06465cf019848cf20430273af626c1299
     icon: https://img.icons8.com/color/452/mongodb.png
@@ -28,10 +28,22 @@ entries:
     urls:
     - mongodb-0.1.11.tgz
     version: 0.1.11
+  mysql:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-01-15T01:15:03.6940439-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 845d539c7be6a42b07475688e8420a4f8c662ae3946d18e8fe30a49933cb8de1
+    icon: https://camo.githubusercontent.com/f85f882cb31eeaeee657ec955313015c30378e8f56c3dc2f06933b617a276cfd/68747470733a2f2f77372e706e6777696e672e636f6d2f706e67732f3734372f3739382f706e672d7472616e73706172656e742d6d7973716c2d6c6f676f2d6d7973716c2d64617461626173652d7765622d646576656c6f706d656e742d636f6d70757465722d736f6674776172652d646f6c7068696e2d6d6172696e652d6d616d6d616c2d616e696d616c732d746578742d7468756d626e61696c2e706e67
+    name: mysql
+    type: application
+    urls:
+    - mysql-0.1.0.tgz
+    version: 0.1.0
   redis-basic:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-14T18:03:03.0109095-05:00"
+    created: "2021-01-15T01:15:03.6996854-05:00"
     description: Template for deploying Redis to Porter.
     digest: 4a7693a54ee2f1d48b7515f2bc626040482864732e53182a3a4208bc6e077f2f
     icon: https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png
@@ -43,7 +55,7 @@ entries:
   ubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-14T18:03:03.0114122-05:00"
+    created: "2021-01-15T01:15:03.7058531-05:00"
     description: Template for deploying an Ubuntu image to Porter.
     digest: 23ce3f8482fafc7570c9e39c4f35cd4f437d147e65f016fd10d9267aa3b98b0f
     icon: https://image.flaticon.com/icons/png/512/888/888879.png
@@ -52,4 +64,4 @@ entries:
     urls:
     - ubuntu-0.1.2.tgz
     version: 0.1.2
-generated: "2021-01-14T18:03:03.0059327-05:00"
+generated: "2021-01-15T01:15:03.6708593-05:00"
