@@ -81,8 +81,5 @@ affinity: {}
 auth:
   password: bXlzcWxmdHc=
 
-network:
-  kubernetesiohost: mysql-node
-
 resources:
   storage: 1Gi

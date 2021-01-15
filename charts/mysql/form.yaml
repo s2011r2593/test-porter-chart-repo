@@ -13,16 +13,6 @@ tabs:
       required: true
       settings:
         default: bXlzcWxmdHc=
-  - name: network
-    contents:
-    - type: heading
-      label: Network Settings
-    - type: string-input
-      variable: network.kubernetesiohost
-      required: true
-      label: Kubernetes node name
-      settings:
-        default: mongo-node
   - name: resource
     contents:
     - type: heading

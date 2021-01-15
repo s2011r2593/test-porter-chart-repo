@@ -37,8 +37,6 @@ spec:
         volumeMounts:
         - name: mysql-store
           mountPath: /var/lib/mysql
-      nodeSelector:
-        kubernetes.io/hostname: {{ .Values.network.kubernetesiohost }} 
       volumes:
       - name: mysql-store
         persistentVolumeClaim:

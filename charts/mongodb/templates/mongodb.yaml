@@ -38,8 +38,6 @@ spec:
           readOnly: true
         - name: mongo-store
           mountPath: /data/db
-      nodeSelector:
-        kubernetes.io/hostname: {{ .Values.network.kubernetesiohost }} 
       volumes:
       - name: mongo-secret
         secret:

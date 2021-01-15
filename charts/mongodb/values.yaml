@@ -84,6 +84,3 @@ resources:
 auth:
   username: cG9ydGVy
   password: aWx1dm1vbmdvZGI=
-
-network:
-  kubernetesiohost: mongo-node
