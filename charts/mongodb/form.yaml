@@ -1,7 +1,7 @@
 name: MongoDB
 tabs:
 - name: main
-  label: Main Settings
+  label: Config
   sections:
   - name: section_one
     contents: 
