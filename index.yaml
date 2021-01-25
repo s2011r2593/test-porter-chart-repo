@@ -3,7 +3,7 @@ entries:
   docker:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-25T17:54:47.0642793-05:00"
+    created: "2021-01-25T18:02:16.5968948-05:00"
     description: Template for deploying any Docker container on Porter.
     digest: 91b2ad3c226f589867ad06fa2b39e6b908548944c8d2169c0b9d442b1acb5526
     home: https://getporter.dev/
@@ -19,19 +19,19 @@ entries:
   metabase:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-25T17:54:47.0711908-05:00"
+    created: "2021-01-25T18:02:16.602325-05:00"
     description: Template for deploying any Docker container on Porter.
-    digest: 5fedfda6f0a08a70d70fc8de26198de7c2032b0e0c12e9b7d125f238d19ec2f2
+    digest: bf1d25c29b46e5a0ff6fd30509052e0f679670a17ce51bc40d3516146e3a01d4
     icon: https://pbs.twimg.com/profile_images/961380992727465985/4unoiuHt.jpg
     name: metabase
     type: application
     urls:
-    - metabase-0.1.2.tgz
-    version: 0.1.2
+    - metabase-0.1.3.tgz
+    version: 0.1.3
   mongodb:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-25T17:54:47.0775567-05:00"
+    created: "2021-01-25T18:02:16.6075108-05:00"
     description: Template for creating a basic persistent MongoDB database.
     digest: 3c16543ab07f60c1022ca6c881aae3a3b7f57586f5dfc3848673902eee2def74
     icon: https://img.icons8.com/color/452/mongodb.png
@@ -43,7 +43,7 @@ entries:
   mysql:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-25T17:54:47.0847119-05:00"
+    created: "2021-01-25T18:02:16.6136775-05:00"
     description: Template for deploying a MySQL databse.
     digest: 5f8009de8a4a8dc09f127dd74369fc6127c85f6b06a80733ca07143c16c2f02c
     icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
@@ -57,7 +57,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.10.0
-    created: "2021-01-25T17:54:47.100073-05:00"
+    created: "2021-01-25T18:02:16.6246652-05:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -89,7 +89,7 @@ entries:
   redis-basic:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-25T17:54:47.1067192-05:00"
+    created: "2021-01-25T18:02:16.6308341-05:00"
     description: Template for deploying Redis to Porter.
     digest: 4a7693a54ee2f1d48b7515f2bc626040482864732e53182a3a4208bc6e077f2f
     icon: https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png
@@ -101,7 +101,7 @@ entries:
   ubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-25T17:54:47.1187264-05:00"
+    created: "2021-01-25T18:02:16.6366024-05:00"
     description: Template for deploying an Ubuntu image to Porter.
     digest: 23ce3f8482fafc7570c9e39c4f35cd4f437d147e65f016fd10d9267aa3b98b0f
     icon: https://image.flaticon.com/icons/png/512/888/888879.png
@@ -110,4 +110,4 @@ entries:
     urls:
     - ubuntu-0.1.2.tgz
     version: 0.1.2
-generated: "2021-01-25T17:54:47.0573962-05:00"
+generated: "2021-01-25T18:02:16.5908638-05:00"
