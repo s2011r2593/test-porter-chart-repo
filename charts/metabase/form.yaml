@@ -1,25 +1,6 @@
 name: Metabase
-hasSource: true
+hasSource: false
 tabs:
-- name: main
-  label: Main Settings
-  sections:
-  - name: domain_toggle
-    show_if: service.exposed
-    contents:
-    - type: subtitle
-      label: Assign custom domain to your deployment. You must first create an A record in your domain provider that points to your cluster's IP address for this.
-    - type: checkbox
-      variable: custom_domain
-      label: Configure Custom Domain
-      settings:
-        default: false
-  - name: domain_name
-    show_if: custom_domain
-    contents:
-    - type: string-input
-      variable: ingress.host
-      label: Domain Name
 - name: resources
   label: Computing resources
   sections:
