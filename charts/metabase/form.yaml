@@ -1,5 +1,4 @@
 name: Metabase
-hasSource: false
 tabs:
 - name: resources
   label: Computing resources
