@@ -1,0 +1,91 @@
+{{- if .Values.isCluster -}}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "docker-template.fullname" . }}
+data:
+  update-node.sh: |
+    #!/bin/sh
+    REDIS_NODES="/data/nodes.conf"
+    sed -i -e "/myself/ s/[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}/${POD_IP}/" ${REDIS_NODES}
+    exec "$@"
+  redis.conf: |+
+    cluster-enabled yes
+    cluster-require-full-coverage no
+    cluster-node-timeout 15000
+    cluster-config-file /data/nodes.conf
+    cluster-migration-barrier 1
+    appendonly yes
+    protected-mode no
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "docker-template.fullname" . }}
+spec:
+  serviceName: {{ include "docker-template.fullname" . }}
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "docker-template.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "docker-template.fullname" . }}
+    spec:
+      containers:
+      - name: redis
+        image: redis:latest
+        ports:
+        - containerPort: {{ .Values.ports.client }}
+          name: client
+        - containerPort: {{ .Values.ports.bus }}
+          name: gossip
+        command: ["/conf/update-node.sh", "redis-server", "/conf/redis.conf"]
+        env:
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+        volumeMounts:
+        - name: conf
+          mountPath: /conf
+          readOnly: false
+        - name: data
+          mountPath: /data
+          readOnly: false
+      volumes:
+      - name: conf
+        configMap:
+          name: {{ include "docker-template.fullname" . }}
+          defaultMode: 0755
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: {{ .Values.resources.requests.storage }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "docker-template.fullname" . }}
+spec:
+  type: ClusterIP
+  ports:
+  - port: {{ .Values.ports.client }}
+    targetPort: {{ .Values.ports.client }}
+    name: client
+  - port: {{ .Values.ports.bus }}
+    targetPort: {{ .Values.ports.bus }}
+    name: gossip
+  selector:
+    app: {{ include "docker-template.fullname" . }}
+{{- end }}

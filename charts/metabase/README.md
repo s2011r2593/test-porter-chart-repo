@@ -1,7 +1,3 @@
-# Docker Template
+Metabase is an open source business intelligence tool. It lets you ask questions about your data, and displays answers in formats that make sense, whether that’s a bar graph or a detailed table.
 
-This is the template for deploying a Docker image onto Porter. The Porter Docker Template supports container images linked from any connected registry. Public Docker images are supported by default.
-
-You can refer to the Porter docs for instructions on <a href="https://docs.getporter.dev/docs/cli-documentation#pushing-docker-images-to-your-porter-image-registry" target="_blank">pushing to the registry created for you by Porter</a> or <a href="https://docs.getporter.dev/docs/cli-documentation#linking-your-own-private-image-registry" target="_blank">linking your own private registry</a>.
-
-If you have any questions about this template you can reach us at [contact@getporter.dev](mailto:contact@getporter.dev).
+Your questions can be saved for later, making it easy to come back to them, or you can group questions into great looking dashboards. Metabase also makes it easy to share questions and dashboards with the rest of your team.

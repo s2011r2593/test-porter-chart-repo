@@ -1,0 +1,63 @@
+{{- if not .Values.isCluster -}}
+---
+apiVersion: apps/v1
+kind: Statefulset
+metadata:
+  name: redis-deployment
+  labels:
+    app: redis
+spec:
+  selector:
+    matchLabels:
+      app: redis
+      role: master
+      tier: backend
+  replicas: 1
+  template: 
+    metadata:
+      labels:
+        app: redis
+        role: master
+        tier: backend
+    spec:
+      containers:
+      - name: master
+        image: redis
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+        ports:
+        - containerPort: {{ .Values.ports.client }}
+        volumeMounts:
+        - name: conf
+          mountPath: /conf
+          readOnly: false
+        - name: data
+          mountPath: /data
+          readOnly: false
+      volumes:
+      - name: conf
+        configMap:
+          name: redis-cluster
+          defaultMode: 0755
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-master
+  labels:
+    app: redis
+    role: master
+    tier: backend
+spec:
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: {{ .Values.ports.client }}
+    targetPort: {{ .Values.ports.client }}
+  selector:
+    app: redis
+    role: master
+    tier: backend
+{{- end }}
