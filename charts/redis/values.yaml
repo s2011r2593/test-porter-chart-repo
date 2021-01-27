@@ -64,8 +64,8 @@ resources:
   #   cpu: 100m
   #   memory: 128Mi
   requests:
-    cpu: 100m
-    memory: 100Mi
+    cpu: 36m
+    memory: 69Mi
     storage: 0.5Gi
 
 ports:
